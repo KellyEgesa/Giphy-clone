@@ -1,0 +1,13 @@
+<app-form-component (searchParam)="searchNewParam($event)"></app-form-component
+><br />
+<div class="text-center">
+  <h5 class="text-white display-5">{{ search }}</h5>
+</div>
+<div class="container-fluid row p-2 m-0">
+  <div *ngFor="let item of giphy" class="col-sm">
+    <div class="card mx-auto m-1" id="giphyCards">
+      <img src="{{ item.gif }}" alt="" />
+    </div>
+  </div>
+  <button class="btn btn-info m-3" (click)="loadMore()">Load More</button>
+</div>
